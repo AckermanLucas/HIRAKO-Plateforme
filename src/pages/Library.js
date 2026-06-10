@@ -6,7 +6,7 @@ import { LayoutGrid, List } from 'lucide-react';
 
 export default function Library({ spotify }) {
   const { localLibrary } = usePlayer();
-  const [view, setView] = useState('grid'); // 'grid' | 'list'
+  const [view, setView] = React.useState('grid'); // 'grid' | 'list'
   //const [spotifyLibrary, setSpotifyLibrary] = useState([]);
 
   const allTracks = [...localLibrary, ...DEMO_TRACKS];
