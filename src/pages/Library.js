@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { DEMO_TRACKS } from '../utils/demoData';
 import { TrackRow, TrackGrid, SectionHeader } from '../components/TrackComponents';
 import { usePlayer } from '../context/PlayerContext';
@@ -7,7 +7,7 @@ import { LayoutGrid, List } from 'lucide-react';
 export default function Library({ spotify }) {
   const { localLibrary } = usePlayer();
   const [view, setView] = useState('grid'); // 'grid' | 'list'
-  const [spotifyLibrary, setSpotifyLibrary] = useState([]);
+  //const [spotifyLibrary, setSpotifyLibrary] = useState([]);
 
   const allTracks = [...localLibrary, ...DEMO_TRACKS];
 
