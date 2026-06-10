@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Search as SearchIcon, X } from 'lucide-react';
 import { DEMO_TRACKS } from '../utils/demoData';
 import { TrackRow, TrackGrid, SectionHeader } from '../components/TrackComponents';
