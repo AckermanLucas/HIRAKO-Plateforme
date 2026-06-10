@@ -1,0 +1,159 @@
+/* ============================================
+   HOME PAGE
+   ============================================ */
+
+.home {
+  padding: 0 0 32px;
+  animation: fadeIn 0.4s ease;
+}
+
+/* Hero banner */
+.home__hero {
+  position: relative;
+  padding: 60px 32px 40px;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.home__hero-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(124,106,247,0.25) 0%, transparent 70%),
+              radial-gradient(ellipse 50% 50% at 80% 100%, rgba(244,114,182,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.home__hero-noise {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.home__greeting {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 5vw, 52px);
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.05;
+  color: var(--text-primary);
+  position: relative;
+  z-index: 1;
+}
+
+.home__greeting em {
+  font-style: normal;
+  background: linear-gradient(135deg, var(--accent-bright) 0%, var(--neon-pink) 60%, var(--neon-cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.home__subtitle {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-top: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Quick access */
+.home__quick {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 8px;
+  padding: 0 24px;
+  margin-bottom: 32px;
+}
+
+.home__quick-item {
+  background: var(--bg-elevated);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all var(--transition);
+  border: 1px solid transparent;
+}
+
+.home__quick-item:hover {
+  background: var(--bg-hover);
+  border-color: var(--border);
+  transform: scale(1.01);
+}
+
+.home__quick-img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.home__quick-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 12px;
+}
+
+/* Sections */
+.home__section {
+  padding: 0 24px;
+  margin-bottom: 36px;
+}
+
+/* Spotify Connect Banner */
+.home__spotify-banner {
+  margin: 0 24px 24px;
+  padding: 20px 24px;
+  background: linear-gradient(135deg, rgba(29,185,84,0.15) 0%, rgba(29,185,84,0.05) 100%);
+  border: 1px solid rgba(29,185,84,0.25);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.home__spotify-banner-text h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.home__spotify-banner-text p {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.home__spotify-connect-btn {
+  background: #1DB954;
+  color: #000;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all var(--transition);
+}
+
+.home__spotify-connect-btn:hover {
+  background: #1ed760;
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home__hero { padding: 40px 16px 28px; }
+  .home__section { padding: 0 12px; }
+  .home__quick { padding: 0 12px; grid-template-columns: repeat(2, 1fr); }
+  .home__spotify-banner { margin: 0 12px 20px; flex-direction: column; align-items: flex-start; gap: 12px; }
+}
