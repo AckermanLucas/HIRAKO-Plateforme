@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { UseState } from 'react';
 import { DEMO_TRACKS } from '../utils/demoData';
 import { TrackRow, TrackGrid, SectionHeader } from '../components/TrackComponents';
 import { usePlayer } from '../context/PlayerContext';
